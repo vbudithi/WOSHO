@@ -18,6 +18,8 @@ import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import { loginSchema, LoginFormData } from "../validation/loginSchema";
+import { router } from "expo-router";
+
 
 export default function LoginScreen() {
     const [showPassword, setShowPassword] = useState(false);
@@ -37,6 +39,7 @@ export default function LoginScreen() {
     const onSubmit = (data: LoginFormData) => {
         console.log("Login Data:", data);
     };
+
 
     return (
         <SafeAreaView style={styles.container}>
@@ -142,7 +145,8 @@ export default function LoginScreen() {
 
                         {/* Forgot */}
 
-                        <TouchableOpacity style={styles.forgotContainer}>
+                        <TouchableOpacity style={styles.forgotContainer}
+                            onPress={() => router.push("/forgot-password")}>
                             <Text style={styles.forgot}>
                                 Forgot password?
                             </Text>
