@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { StatusBar, TextInput, TouchableOpacity, View, Text, StyleSheet } from "react-native";
+import { StatusBar, TextInput, TouchableOpacity, View, Text, StyleSheet, ScrollView } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import { ForgotPasswordFormData, forgotPasswordSchema } from "../validation/forgotPasswordSchema";
@@ -10,7 +10,6 @@ import { Controller, useForm } from "react-hook-form";
 
 export default function ForgotPasswordScreen() {
 
-
     const {
         control,
         handleSubmit,
@@ -18,7 +17,7 @@ export default function ForgotPasswordScreen() {
     } = useForm<ForgotPasswordFormData>({
         resolver: zodResolver(forgotPasswordSchema),
         defaultValues: {
-            emailOrMobile: "",
+            email: "",
         },
     });
 
@@ -42,44 +41,91 @@ export default function ForgotPasswordScreen() {
 
                 <Text style={styles.title}>Forgot Password</Text>
                 <Text style={styles.subtitle}>
-                    Enter your email or mobile number to reset your password
+                    No worries! Enter your registered email to reset your password
                 </Text>
             </View>
 
             <View style={styles.card}>
-                <Text style={styles.label}>EMAIL OR MOBILE</Text>
-                <Controller
-                    control={control}
-                    name="emailOrMobile"
-                    render={({ field: { onChange, value } }) => (
-                        <TextInput
-                            style={[
-                                styles.input,
-                                errors.emailOrMobile && styles.errorInput,
-                            ]}
-                            placeholder="Enter email or mobile"
-                            placeholderTextColor="#999"
-                            value={value}
-                            onChangeText={onChange}
-                            autoCapitalize="none"
-                        />
-                    )}
-                />
-
-                {errors.emailOrMobile && (
-                    <Text style={styles.errorText}>
-                        {errors.emailOrMobile.message}
-                    </Text>
-                )}
-
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={handleSubmit(onSubmit)}
+                <ScrollView
+                    keyboardShouldPersistTaps="handled"
+                    showsVerticalScrollIndicator={false}
                 >
-                    <Text style={styles.buttonText}>
-                        Continue
-                    </Text>
-                </TouchableOpacity>
+                    <View style={styles.lockContainer}>
+                        <View style={styles.lockCircle}>
+                            <Ionicons
+                                name="lock-closed"
+                                size={60}
+                                color="#16A34A"
+                            />
+                        </View>
+                    </View>
+
+                    <Text style={styles.label}>EMAIL</Text>
+                    <Controller
+                        control={control}
+                        name="email"
+                        render={({ field: { onChange, value } }) => (
+                            <View
+                                style={[
+                                    styles.inputContainer,
+                                    errors.email && styles.errorInput,
+                                ]}
+                            >
+                                <Ionicons
+                                    name="mail-outline"
+                                    size={22}
+                                    color="#666"
+                                    style={{ marginRight: 10 }}
+                                />
+
+                                <TextInput
+                                    style={styles.inputField}
+                                    placeholder="Enter your Email"
+                                    placeholderTextColor="#999"
+                                    value={value}
+                                    onChangeText={onChange}
+                                    autoCapitalize="none"
+                                    keyboardType="email-address"
+                                />
+                            </View>
+                        )}
+                    />
+                    {errors.email && (
+                        <Text style={styles.errorText}>
+                            {errors.email.message}
+                        </Text>
+                    )}
+
+                    <TouchableOpacity
+                        style={styles.button}
+                        onPress={handleSubmit(onSubmit)}
+                    >
+                        <Text style={styles.buttonText}>
+                            Continue
+                        </Text>
+                    </TouchableOpacity>
+
+                    {/* Divider */}
+                    <View style={styles.divider}>
+                        <View style={styles.line} />
+
+                        <Text style={styles.or}>or</Text>
+
+                        <View style={styles.line} />
+                    </View>
+                    <View style={styles.footer}>
+                        <Text style={styles.footerText}>
+                            Remember your password?
+                        </Text>
+                        <TouchableOpacity
+                            onPress={() => router.back()}
+                        >
+                            <Text style={styles.loginLink}>
+                                Back to Login
+                            </Text>
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
             </View>
         </SafeAreaView>
     );
@@ -130,12 +176,30 @@ const styles = StyleSheet.create({
     },
 
     input: {
+        height: 60,
+        borderWidth: 1.5,
+        borderColor: "#D8D8D8",
+        borderRadius: 16,
+        paddingHorizontal: 18,
+        fontSize: 17,
+        color: "#111111",
+        marginTop: 10,
+    },
+    inputContainer: {
+        flexDirection: "row",
+        alignItems: "center",
         borderWidth: 1,
         borderColor: "#CCC",
         borderRadius: 16,
         height: 60,
         paddingHorizontal: 18,
+        backgroundColor: "#FFF",
+    },
+
+    inputField: {
+        flex: 1,
         fontSize: 17,
+        color: "#000",
     },
 
     button: {
@@ -169,6 +233,53 @@ const styles = StyleSheet.create({
         fontSize: 13,
         marginTop: 5,
         marginLeft: 3,
+    },
+
+    footer: {
+        flexDirection: "row",
+        justifyContent: "center",
+
+    },
+
+    footerText: {
+        color: "#70757A",
+        fontSize: 16,
+    },
+    loginLink: {
+        color: "#0F6A4F",
+        fontSize: 16,
+        fontWeight: "700",
+        marginLeft: 5,
+    },
+    divider: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginVertical: 28,
+    },
+
+    line: {
+        flex: 1,
+        height: 1,
+        backgroundColor: "#DDD",
+    },
+
+    or: {
+        marginHorizontal: 15,
+        color: "#888",
+    },
+    lockContainer: {
+        alignItems: "center",
+        marginBottom: 30,
+        marginTop: 40,
+    },
+
+    lockCircle: {
+        width: 110,
+        height: 110,
+        borderRadius: 70,
+        backgroundColor: "#d0dfd6",
+        justifyContent: "center",
+        alignItems: "center",
     },
 
 });

@@ -3,21 +3,21 @@ import { z } from "zod";
 import { StyleSheet } from "react-native";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const mobileRegex = /^[0-9]{10}$/;
+// const mobileRegex = /^[0-9]{10}$/;
 
 export const forgotPasswordSchema = z.object({
-    emailOrMobile: z
+    email: z
         .string()
         .trim()
-        .nonempty("Email or Mobile Number is required")
+        .nonempty("Email is required")
         .superRefine((value, ctx) => {
             const isEmail = emailRegex.test(value);
-            const isMobile = mobileRegex.test(value);
+            // const isMobile = mobileRegex.test(value);
 
-            if (!isEmail && !isMobile) {
+            if (!isEmail /* && !isMobile */) {
                 ctx.addIssue({
                     code: z.ZodIssueCode.custom,
-                    message: "Enter a valid email or mobile number",
+                    message: "Enter a valid email",
                 });
             }
         }),

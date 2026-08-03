@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
+
 import {
-    SafeAreaView,
     View,
     Text,
     TextInput,
@@ -66,32 +67,42 @@ export default function LoginScreen() {
                     >
                         {/* EMAIL */}
 
-                        <Text style={styles.label}>EMAIL OR MOBILE</Text>
+                        <Text style={styles.label}>EMAIL</Text>
 
                         <Controller
                             control={control}
                             name="email"
                             render={({ field: { onChange, value } }) => (
-                                <TextInput
+                                <View
                                     style={[
-                                        styles.input,
+                                        styles.inputContainer,
                                         errors.email && styles.errorInput,
                                     ]}
-                                    placeholder="Enter email or mobile"
-                                    placeholderTextColor="#999"
-                                    value={value}
-                                    onChangeText={onChange}
-                                    autoCapitalize="none"
-                                    keyboardType="email-address"
-                                />
+                                >
+                                    <Ionicons
+                                        name="mail-outline"
+                                        size={22}
+                                        color="#666"
+                                        style={{ marginRight: 10 }}
+                                    />
+
+                                    <TextInput
+                                        style={styles.inputField}
+                                        placeholder="Enter your Email"
+                                        placeholderTextColor="#999"
+                                        value={value}
+                                        onChangeText={onChange}
+                                        autoCapitalize="none"
+                                        keyboardType="email-address"
+                                    />
+                                </View>
                             )}
                         />
 
                         {errors.email && (
-                            <Text style={styles.errorText}>
-                                {errors.email.message}
-                            </Text>
+                            <Text style={styles.errorText}>{errors.email.message}</Text>
                         )}
+
 
                         {/* PASSWORD */}
 
@@ -109,9 +120,15 @@ export default function LoginScreen() {
                                         errors.password && styles.errorInput,
                                     ]}
                                 >
+                                    <Ionicons
+                                        name="lock-closed-outline"
+                                        size={22}
+                                        color="#666"
+                                        style={{ marginRight: 10 }}
+                                    />
                                     <TextInput
                                         style={styles.passwordInput}
-                                        placeholder="Enter password"
+                                        placeholder="Password"
                                         placeholderTextColor="#999"
                                         secureTextEntry={!showPassword}
                                         value={value}
@@ -175,7 +192,9 @@ export default function LoginScreen() {
 
                         {/* OTP */}
 
-                        <TouchableOpacity style={styles.otpButton}>
+                        <TouchableOpacity
+                            style={styles.otpButton}
+                            onPress={() => router.push("/otp")}>
                             <Text style={styles.otpText}>
                                 Continue with OTP
                             </Text>
@@ -202,6 +221,8 @@ export default function LoginScreen() {
 }
 
 const styles = StyleSheet.create({
+
+
     container: {
         flex: 1,
         backgroundColor: "#111",
@@ -214,7 +235,7 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        width: 300,
+        width: 200,
         height: 120,
         alignSelf: "center",
         marginBottom: 20,
@@ -255,20 +276,37 @@ const styles = StyleSheet.create({
         paddingHorizontal: 18,
         fontSize: 17,
     },
-
-    passwordContainer: {
-        height: 60,
+    inputContainer: {
+        flexDirection: "row",
+        alignItems: "center",
         borderWidth: 1,
         borderColor: "#CCC",
         borderRadius: 16,
+        height: 60,
+        paddingHorizontal: 18,
+        backgroundColor: "#FFF",
+    },
+
+    inputField: {
+        flex: 1,
+        fontSize: 17,
+        color: "#000",
+    },
+    passwordContainer: {
         flexDirection: "row",
         alignItems: "center",
+        borderWidth: 1,
+        borderColor: "#CCC",
+        borderRadius: 16,
+        height: 60,
         paddingHorizontal: 18,
+        backgroundColor: "#FFF",
     },
 
     passwordInput: {
         flex: 1,
         fontSize: 17,
+        color: "#000",
     },
 
     errorInput: {

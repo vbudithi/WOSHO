@@ -1,3 +1,3 @@
-import OTPScreen from "@/features/authentication/screens/OTPScreen";
+import OTPLoginScreen from "@/features/authentication/screens/OTPLoginScreen";
 
-export default OTPScreen;
+export default OTPLoginScreen;
