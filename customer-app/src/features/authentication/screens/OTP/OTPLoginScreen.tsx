@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     SafeAreaView,
     View,
@@ -9,6 +9,7 @@ import {
     KeyboardAvoidingView,
     Platform,
     ScrollView,
+    TextInput,
 } from "react-native";
 
 import { router, useLocalSearchParams } from "expo-router";
@@ -17,12 +18,38 @@ import { Ionicons } from "@expo/vector-icons";
 import OTPTextView from "react-native-otp-textinput";
 
 export default function OTPScreen() {
+
     const { mobileNumber } = useLocalSearchParams();
 
-    const handleVerify = () => {
-        //  OTP API
+    //static OTP for testing purpose
+    const STATIC_OTP = "123456";
+    const [otp, setOtp] = useState("");
+    const [otpError, setOtpError] = useState("");
 
-        router.replace("/home");
+    const handleVerify = () => {
+        //  Empty 
+        if (!otp.trim()) {
+            setOtpError("Verification code is required.");
+            return;
+        }
+
+        // less than 6 digits
+        if (otp.length < 6) {
+            setOtpError("Verification code must be 6 digits");
+            return;
+        }
+
+        // static OTP validation for testing purpose
+        if (otp !== STATIC_OTP) {
+            setOtpError("Invalid verification code");
+            return;
+        }
+        setOtpError("");
+
+
+        // success screen
+        router.replace("/otp-sucess");
+
     };
 
     return (
@@ -81,12 +108,26 @@ export default function OTPScreen() {
 
                         <OTPTextView
                             inputCount={6}
-                            tintColor="#16A34A"
-                            offTintColor="#DDD"
-                            textInputStyle={styles.otpInput}
+                            handleTextChange={(text) => {
+                                setOtp(text)
+                                if (otpError) {
+                                    setOtpError("");
+                                }
+                            }}
+                            tintColor={otpError ? "#E53935" : "#16A34A"}
+                            offTintColor={otpError ? "#E53935" : "#D8D8D8"}
+                            textInputStyle={{
+                                ...styles.otpInput,
+                                ...(otpError ? styles.errorInput : {})
+                            }}
                         />
+                        {otpError ? (
+                            <Text style={styles.errorText}>
+                                {otpError}
+                            </Text>
+                        ) : null}
 
-                        <Text style={styles.info}>
+                        < Text style={styles.info} >
                             Didn't receive the code?
                         </Text>
 
@@ -107,7 +148,7 @@ export default function OTPScreen() {
                     </ScrollView>
                 </View>
             </KeyboardAvoidingView>
-        </SafeAreaView>
+        </SafeAreaView >
     );
 }
 
@@ -177,12 +218,30 @@ const styles = StyleSheet.create({
     },
 
     otpInput: {
-        borderWidth: 1,
-        borderRadius: 12,
         width: 48,
         height: 58,
+        borderWidth: 1.5,
+        borderColor: "#D8D8D8",
+        borderRadius: 18,
         fontSize: 22,
         fontWeight: "700",
+        color: "#111111",
+        backgroundColor: "#FFFFFF",
+    },
+    input: {
+        height: 60,
+        borderWidth: 1.5,
+        borderColor: "#D8D8D8",
+        borderRadius: 16,
+        paddingHorizontal: 18,
+        fontSize: 22,
+        textAlign: "center",
+        letterSpacing: 8,
+        color: "#111111",
+    },
+    errorInput: {
+        borderColor: "#E53935",
+        borderWidth: 2,
     },
 
     info: {
@@ -214,5 +273,12 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "700",
     },
+    errorText: {
+        color: "#E53935",
+        fontSize: 13,
+        textAlign: "center",
+        marginTop: 10,
+    },
+
 
 });

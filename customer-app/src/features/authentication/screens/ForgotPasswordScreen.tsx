@@ -24,8 +24,7 @@ export default function ForgotPasswordScreen() {
     const onSubmit = (data: ForgotPasswordFormData) => {
         console.log("Forgot Password:", data);
 
-        // TODO:
-        // Call Forgot Password API
+        // Forgot Password API
 
         router.push("/otp");
     };
