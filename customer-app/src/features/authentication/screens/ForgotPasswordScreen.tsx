@@ -22,13 +22,14 @@ export default function ForgotPasswordScreen() {
     });
 
     const onSubmit = (data: ForgotPasswordFormData) => {
-        console.log("Forgot Password:", data);
 
-        // Forgot Password API
-
-        router.push("/otp");
+        router.push({
+            pathname: "/email-sent",
+            params: {
+                email: data.email
+            },
+        });
     };
-
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" />
