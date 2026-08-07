@@ -65,7 +65,6 @@ export default function LoginScreen() {
                         keyboardShouldPersistTaps="handled"
                         showsVerticalScrollIndicator={false}
                     >
-                        {/* EMAIL */}
 
                         <Text style={styles.label}>EMAIL</Text>
 
@@ -102,9 +101,6 @@ export default function LoginScreen() {
                         {errors.email && (
                             <Text style={styles.errorText}>{errors.email.message}</Text>
                         )}
-
-
-                        {/* PASSWORD */}
 
                         <Text style={[styles.label, { marginTop: 22 }]}>
                             PASSWORD
@@ -160,16 +156,12 @@ export default function LoginScreen() {
                             </Text>
                         )}
 
-                        {/* Forgot */}
-
                         <TouchableOpacity style={styles.forgotContainer}
                             onPress={() => router.push("/forgot-password")}>
                             <Text style={styles.forgot}>
                                 Forgot password?
                             </Text>
                         </TouchableOpacity>
-
-                        {/* Login */}
 
                         <TouchableOpacity
                             style={styles.loginButton}
@@ -180,8 +172,6 @@ export default function LoginScreen() {
                             </Text>
                         </TouchableOpacity>
 
-                        {/* Divider */}
-
                         <View style={styles.divider}>
                             <View style={styles.line} />
 
@@ -189,8 +179,6 @@ export default function LoginScreen() {
 
                             <View style={styles.line} />
                         </View>
-
-                        {/* OTP */}
 
                         <TouchableOpacity
                             style={styles.otpButton}
@@ -208,7 +196,8 @@ export default function LoginScreen() {
                             </Text>
 
                             <TouchableOpacity>
-                                <Text style={styles.signupLink}>
+                                <Text style={styles.signupLink}
+                                    onPress={() => router.push("/registration-screen")}>
                                     {" "}Create account
                                 </Text>
                             </TouchableOpacity>
