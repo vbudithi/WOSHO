@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 import {
     View,
     Text,
@@ -14,13 +13,10 @@ import {
     Platform,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import { loginSchema, LoginFormData } from "../validation/loginSchema";
 import { router } from "expo-router";
-
 
 export default function LoginScreen() {
     const [showPassword, setShowPassword] = useState(false);
@@ -40,20 +36,12 @@ export default function LoginScreen() {
     const onSubmit = (data: LoginFormData) => {
         console.log("Login Data:", data);
     };
-
-
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor="#111" />
 
             <View style={styles.header}>
                 <Image source={require("../assets/WOSHO_logo.png")} style={styles.logo} resizeMode="contain" />
-
-                <Text style={styles.title}>Welcome back.</Text>
-
-                <Text style={styles.subtitle}>
-                    Log in to book your next wash.
-                </Text>
             </View>
 
             <KeyboardAvoidingView
@@ -65,8 +53,12 @@ export default function LoginScreen() {
                         keyboardShouldPersistTaps="handled"
                         showsVerticalScrollIndicator={false}
                     >
+                        <Text style={styles.title}>Welcome back.</Text>
 
-                        <Text style={styles.label}>EMAIL</Text>
+                        <Text style={styles.subtitle}>
+                            Log in to book your next wash.
+                        </Text>
+                        <Text style={styles.label}>Email</Text>
 
                         <Controller
                             control={control}
@@ -84,15 +76,14 @@ export default function LoginScreen() {
                                         color="#666"
                                         style={{ marginRight: 10 }}
                                     />
-
                                     <TextInput
                                         style={styles.inputField}
                                         placeholder="Enter your Email"
                                         placeholderTextColor="#999"
-                                        value={value}
-                                        onChangeText={onChange}
                                         autoCapitalize="none"
                                         keyboardType="email-address"
+                                        value={value}
+                                        onChangeText={onChange}
                                     />
                                 </View>
                             )}
@@ -103,7 +94,7 @@ export default function LoginScreen() {
                         )}
 
                         <Text style={[styles.label, { marginTop: 22 }]}>
-                            PASSWORD
+                            Password
                         </Text>
 
                         <Controller
@@ -159,7 +150,7 @@ export default function LoginScreen() {
                         <TouchableOpacity style={styles.forgotContainer}
                             onPress={() => router.push("/forgot-password")}>
                             <Text style={styles.forgot}>
-                                Forgot password?
+                                Forgot Password ?
                             </Text>
                         </TouchableOpacity>
 
@@ -231,15 +222,17 @@ const styles = StyleSheet.create({
     },
 
     title: {
-        color: "#FFF",
+        color: "#000",
         fontSize: 38,
         fontWeight: "700",
+        textAlign: "center",
     },
 
     subtitle: {
-        color: "#B3B3B3",
+        color: "#453e3e",
+        textAlign: "center",
         fontSize: 18,
-        marginTop: 6,
+        marginBottom: 35,
     },
 
     card: {
@@ -315,7 +308,7 @@ const styles = StyleSheet.create({
     },
 
     forgot: {
-        color: "#0F6A4F",
+        color: "red",
         fontWeight: "600",
     },
 

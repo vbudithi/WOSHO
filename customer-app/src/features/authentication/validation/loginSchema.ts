@@ -10,7 +10,7 @@ export const loginSchema = z.object({
     email: z
         .string()
         .trim()
-        .nonempty("Email or Mobile Number is required")
+        .nonempty("Enter a valid email address.")
         .superRefine((value, ctx) => {
             const isEmail = emailRegex.test(value);
             const isMobile = mobileRegex.test(value);
@@ -18,7 +18,7 @@ export const loginSchema = z.object({
             if (!isEmail && !isMobile) {
                 ctx.addIssue({
                     code: z.ZodIssueCode.custom,
-                    message: "Enter a valid email or mobile number",
+                    message: "Enter a valid email number",
                 });
             }
         }),
@@ -26,8 +26,7 @@ export const loginSchema = z.object({
     password: z
         .string()
         .trim()
-        .nonempty("Password is required")
-        .min(8, "Password must be at least 8 characters"),
+        .nonempty("Password cannot be empty.")
 });
 
 export type LoginFormData = z.infer<typeof loginSchema>;

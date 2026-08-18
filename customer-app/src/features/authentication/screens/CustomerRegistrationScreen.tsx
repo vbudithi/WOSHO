@@ -1,27 +1,72 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { SafeAreaView, StatusBar, StyleSheet, TouchableOpacity, View, Text, KeyboardAvoidingView, Platform, ScrollView, TextInput } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from "@expo/vector-icons";
+import { CustomerRegistrationFormData, customerRegistrationSchema } from '../validation/customerRegistrationSchema';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Controller, useForm } from 'react-hook-form';
+
 export default function CustomerRegistrationScreen() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [mobileNumber, setMobileNumber] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const {
+        control, handleSubmit,
+        formState: { errors },
+    } = useForm<CustomerRegistrationFormData>({
+        resolver: zodResolver(customerRegistrationSchema),
+        defaultValues: {
+            firstName: "",
+            lastName: "",
+            email: "",
+            mobileNumber: "",
+            password: "",
+            confirmPassword: ""
+        }
+    })
 
-    const handleContinue = () => {
-
-        router.push("/otp");
+    const handleContinue = (
+        data: CustomerRegistrationFormData
+    ) => {
+        console.log("Registration Data", data);
+        router.push({
+            pathname: "/otp",
+            params: {
+                mobileNumber: data.mobileNumber,
+                purpose: "registration",
+            }
+        });
     };
+    const validatePassword = (password: any) => {
+        return {
+            length: password.length >= 8,
+            upper: /[A-Z]/.test(password),
+            lower: /[a-z]/.test(password),
+            number: /[0-9]/.test(password),
+            special: /[^A-Za-z0-9]/.test(password),
+        };
+    };
+    const [rules, setRules] = useState({
+        length: false,
+        upper: false,
+        lower: false,
+        number: false,
+        special: false,
+    });
 
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor="#111111" />
             <View style={styles.header}>
-                <TouchableOpacity onPress={() => router.back()}>
+                <TouchableOpacity
+                    onPress={() => {
+                        if (router.canGoBack()) {
+                            router.back();
+                        } else {
+                            router.replace("/");
+                        }
+                    }}
+                    style={styles.backButton}
+                >
                     <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
                 </TouchableOpacity>
 
@@ -35,17 +80,18 @@ export default function CustomerRegistrationScreen() {
             </View>
 
             <KeyboardAvoidingView
-                style={{ flex: 1 }}
+                style={styles.keyboardView}
                 behavior={
                     Platform.OS === "ios"
                         ? "padding"
                         : "height"
                 }
             >
-
-                < View style={styles.card}>
-                    <ScrollView showsVerticalScrollIndicator={false}
-                        keyboardShouldPersistTaps="handled">
+                <View style={styles.card}>
+                    <ScrollView
+                        showsVerticalScrollIndicator={false}
+                        keyboardShouldPersistTaps="handled"
+                    >
                         <View style={styles.avatarContainer}>
                             <View style={styles.avatarCircle}>
                                 <Ionicons
@@ -56,164 +102,353 @@ export default function CustomerRegistrationScreen() {
                             </View>
                         </View>
 
-                        <Text style={styles.label}>
-                            FIRST NAME
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing
+                            ]}
+                        >
+                            First Name*
                         </Text>
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="person-outline"
-                                size={22}
-                                color="#777"
-                            />
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Enter first name"
-                                placeholderTextColor="#999"
-                                value={firstName}
-                                onChangeText={setFirstName}
-                            />
-                        </View>
+                        <Controller
+                            control={control}
+                            name="firstName"
+                            render={({
+                                field: {
+                                    onChange,
+                                    onBlur,
+                                    value,
+                                },
 
-                        <Text style={[styles.label, { marginTop: 22 }]}>
-                            LAST NAME
+                            }) => (
+                                <View style={[styles.inputContainer,
+                                errors.firstName &&
+                                styles.errorInput,]}>
+                                    <Ionicons
+                                        name="person-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="First Name"
+                                        placeholderTextColor="#999"
+                                        value={value}
+                                        onChangeText={onChange}
+                                        onBlur={onBlur}
+                                        autoCapitalize="words"
+                                        autoCorrect={false}
+                                    />
+                                </View>
+
+                            )}
+                        />
+                        {errors.firstName && (
+                            <Text style={styles.errorText}>
+                                {errors.firstName.message}
+                            </Text>
+                        )}
+
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing
+                            ]}
+                        >
+                            Last Name
                         </Text>
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="person-outline"
-                                size={22}
-                                color="#777"
-                            />
+                        <Controller
+                            control={control}
+                            name="lastName"
+                            render={({
+                                field: {
+                                    onChange,
+                                    onBlur,
+                                    value,
+                                },
+                            }) => (
+                                <View style={styles.inputContainer}>
+                                    <Ionicons
+                                        name="person-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
 
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Enter last name"
-                                placeholderTextColor="#999"
-                                value={lastName}
-                                onChangeText={setLastName}
-                            />
-                        </View>
-                        <Text style={[styles.label, { marginTop: 22 }]}>
-                            EMAIL ADDRESS
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="Last Name"
+                                        placeholderTextColor="#999"
+                                        value={value}
+                                        onChangeText={onChange}
+                                        onBlur={onBlur}
+                                        autoCapitalize="words"
+                                        autoCorrect={false}
+                                    />
+                                </View>
+                            )
+                            }
+                        />
+                        {errors.lastName && (
+                            <Text style={styles.errorText}>
+                                {errors.lastName.message}
+                            </Text>
+                        )}
+
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing
+                            ]}
+                        >
+                            Email*
                         </Text>
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="mail-outline"
-                                size={22}
-                                color="#777"
-                            />
+                        <Controller
+                            control={control}
+                            name="email"
+                            render={({ field: {
+                                onChange,
+                                onBlur,
+                                value
+                            },
+                            }) => (
 
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Enter email address"
-                                placeholderTextColor="#999"
-                                keyboardType="email-address"
-                                autoCapitalize="none"
-                                value={email}
-                                onChangeText={setEmail}
-                            />
-                        </View>
-                        <Text style={[styles.label, { marginTop: 22 }]}>
-                            MOBILE NUMBER
+                                <View style={[
+                                    styles.inputContainer,
+                                    errors.email && styles.errorInput
+                                ]}
+                                >
+                                    <Ionicons
+                                        name="mail-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="Enter your Email"
+                                        placeholderTextColor="#999"
+                                        keyboardType="email-address"
+                                        autoCorrect={false}
+                                        autoCapitalize="none"
+                                        value={value}
+                                        onChangeText={onChange}
+                                        onBlur={onBlur}
+                                    />
+                                </View>
+                            )}
+                        />
+                        {errors.email && (
+                            <Text style={styles.errorText}>
+                                {errors.email.message}
+                            </Text>
+                        )}
+
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing
+                            ]}
+                        >
+                            Phone No*
                         </Text>
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="call-outline"
-                                size={22}
-                                color="#777"
-                            />
-
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Enter mobile number"
-                                placeholderTextColor="#999"
-                                keyboardType="phone-pad"
-                                value={mobileNumber}
-                                onChangeText={setMobileNumber}
-                            />
-                        </View>
-                        <Text style={[styles.label, { marginTop: 22 }]}>
-                            PASSWORD
+                        <Controller
+                            control={control}
+                            name="mobileNumber"
+                            render={({
+                                field: {
+                                    onChange,
+                                    onBlur,
+                                    value,
+                                },
+                            }) => (
+                                <View style={styles.inputContainer}>
+                                    <Ionicons
+                                        name="call-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="Mobile Number"
+                                        placeholderTextColor="#999"
+                                        keyboardType="phone-pad"
+                                        value={value}
+                                        onChangeText={onChange}
+                                        onBlur={onBlur}
+                                    />
+                                </View>
+                            )}
+                        />
+                        {errors.mobileNumber && (
+                            <Text style={styles.errorText}>
+                                {errors.mobileNumber.message}
+                            </Text>
+                        )}
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing
+                            ]}
+                        >
+                            Password*
                         </Text>
+                        <Controller
+                            control={control}
+                            name="password"
+                            render={({
+                                field: {
+                                    onChange,
+                                    onBlur,
+                                    value
+                                },
+                            }) => (
+                                <View style={styles.inputContainer}>
+                                    <Ionicons
+                                        name="lock-closed-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
 
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="lock-closed-outline"
-                                size={22}
-                                color="#777"
-                            />
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="Enter your Password"
+                                        placeholderTextColor="#999"
+                                        secureTextEntry={
+                                            !showPassword
+                                        }
+                                        value={value}
+                                        onChangeText={(text) => {
+                                            onChange(text);
+                                            setRules(validatePassword(text));
+                                        }}
+                                        onBlur={onBlur}
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                    />
+                                    <TouchableOpacity
+                                        onPress={() =>
+                                            setShowPassword(!showPassword)
+                                        }
+                                    >
+                                        <Ionicons
+                                            name={
+                                                showPassword
+                                                    ? "eye-off-outline"
+                                                    : "eye-outline"
+                                            }
+                                            size={22}
+                                            color="#777"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                            )}
+                        />
 
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Enter password"
-                                placeholderTextColor="#999"
-                                secureTextEntry={!showPassword}
-                                value={password}
-                                onChangeText={setPassword}
-                            />
+                        {errors.password && (
+                            <Text style={styles.errorText}>
+                                {errors.password.message}
+                            </Text>
+                        )}
 
-                            <TouchableOpacity
-                                onPress={() =>
-                                    setShowPassword(!showPassword)
+                        <Text
+                            style={[
+                                styles.label,
+                                styles.fieldSpacing,
+                            ]}
+                        >
+                            Confirm Password*
+                        </Text>
+                        <Controller
+                            control={control}
+                            name="confirmPassword"
+                            render={({
+                                field: {
+                                    onChange,
+                                    onBlur,
+                                    value
+                                },
+                            }) => (
+                                <View style={styles.inputContainer}>
+                                    <Ionicons
+                                        name="lock-closed-outline"
+                                        size={22}
+                                        color="#777"
+                                    />
+                                    <TextInput
+                                        style={styles.input}
+                                        placeholder="Confirm Password"
+                                        placeholderTextColor="#999"
+                                        secureTextEntry={!showConfirmPassword}
+                                        value={value}
+                                        onChangeText={onChange}
+                                        onBlur={onBlur}
+                                        autoCapitalize="none"
+                                        autoCorrect={false}
+                                    />
+                                    <TouchableOpacity
+                                        onPress={() =>
+                                            setShowConfirmPassword(
+                                                !showConfirmPassword
+                                            )
+                                        }
+                                    >
+                                        <Ionicons
+                                            name={
+                                                showConfirmPassword
+                                                    ? "eye-off-outline"
+                                                    : "eye-outline"
+                                            }
+                                            size={22}
+                                            color="#777"
+                                        />
+                                    </TouchableOpacity>
+                                </View>
+                            )}
+                        />
+                        {errors.confirmPassword && (
+                            <Text style={styles.errorText}>
+                                {
+                                    errors.confirmPassword
+                                        .message
                                 }
-                            >
-                                <Ionicons
-                                    name={
-                                        showPassword
-                                            ? "eye-off-outline"
-                                            : "eye-outline"
-                                    }
-                                    size={22}
-                                    color="#777"
-                                />
-                            </TouchableOpacity>
+                            </Text>
+                        )}
 
+                        <View style={styles.requirementsContainer}>
+                            <Text style={styles.requirementsTitle}>🔐 Password Requirements</Text>
+
+                            <View style={styles.requirementsList}>
+                                <Text style={[styles.requirement, rules.length && styles.requirementValid]}>
+                                    {rules.length ? "✓" : "•"} 8+ characters
+                                </Text>
+
+                                <Text style={[styles.requirement, rules.upper && styles.requirementValid]}>
+                                    {rules.upper ? "✓" : "•"} Uppercase letter
+                                </Text>
+
+                                <Text style={[styles.requirement, rules.lower && styles.requirementValid]}>
+                                    {rules.lower ? "✓" : "•"} Lowercase letter
+                                </Text>
+
+                                <Text style={[styles.requirement, rules.number && styles.requirementValid]}>
+                                    {rules.number ? "✓" : "•"} Number
+                                </Text>
+
+                                <Text style={[styles.requirement, rules.special && styles.requirementValid]}>
+                                    {rules.special ? "✓" : "•"} Special character
+                                </Text>
+                            </View>
                         </View>
-                        <Text style={[styles.label, { marginTop: 22 }]}>
-                            CONFIRM PASSWORD
-                        </Text>
 
-                        <View style={styles.inputContainer}>
-                            <Ionicons
-                                name="lock-closed-outline"
-                                size={22}
-                                color="#777"
-                            />
-
-                            <TextInput
-                                style={styles.input}
-                                placeholder="Confirm password"
-                                placeholderTextColor="#999"
-                                secureTextEntry={!showConfirmPassword}
-                                value={confirmPassword}
-                                onChangeText={setConfirmPassword}
-                            />
-
-                            <TouchableOpacity
-                                onPress={() =>
-                                    setShowConfirmPassword(
-                                        !showConfirmPassword
-                                    )
-                                }
-                            >
-                                <Ionicons
-                                    name={
-                                        showConfirmPassword
-                                            ? "eye-off-outline"
-                                            : "eye-outline"
-                                    }
-                                    size={22}
-                                    color="#777"
-                                />
-                            </TouchableOpacity>
-                        </View>
                         <TouchableOpacity
-                            style={styles.button}
-                            onPress={handleContinue}>
+                            style={[
+                                styles.button
+                            ]}
+                            onPress={handleSubmit(handleContinue)}>
                             <Text style={styles.buttonText}>
                                 Continue
                             </Text>
                         </TouchableOpacity>
-
+                        <View style={styles.bottomSpacing} />
                     </ScrollView>
                 </View>
             </KeyboardAvoidingView>
@@ -269,6 +504,9 @@ const styles = StyleSheet.create({
         fontWeight: "700",
         marginBottom: 10,
     },
+    fieldSpacing: {
+        marginTop: 22,
+    },
 
     inputContainer: {
         flexDirection: "row",
@@ -300,4 +538,62 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "700",
     },
+
+    errorInput: {
+        borderColor: "#E53935",
+    },
+    buttonDisabled: {
+        backgroundColor: "#BDBDBD",
+    },
+    backButton: {
+        marginBottom: 5,
+    },
+    keyboardView: {
+        flex: 1,
+    },
+    errorText: {
+        color: "#E53935",
+        fontSize: 13,
+        marginTop: 6,
+        marginLeft: 2,
+    },
+    requirements: {
+        marginTop: 25,
+        padding: 16,
+        alignItems: "center",
+        backgroundColor: "#F7F9F8",
+        borderRadius: 14,
+    },
+
+    bottomSpacing: {
+        height: 30,
+    },
+
+    requirementsContainer: {
+        marginTop: 25,
+        marginBottom: 15,
+        alignItems: "center"
+    },
+
+    requirementsTitle: {
+        fontSize: 17,
+        fontWeight: "700",
+        color: "#111",
+        marginBottom: 10,
+    },
+
+    requirementsList: {
+        gap: 6,
+    },
+
+    requirement: {
+        fontSize: 15,
+        color: "#555",
+        marginVertical: 3,
+    },
+
+    requirementValid: {
+        color: "green",
+        fontWeight: "600",
+    }
 });
