@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Wosho.Api.Data;
+using Wosho.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,18 +12,20 @@ builder.Services.AddDbContext<WoshoDbContext>(options =>
 // Add services to the container.
 builder.Services.AddControllers();
 
+
+//Register Services
+builder.Services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
+
 // Swagger
-//builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-
-    //app.MapOpenApi(); 
     app.UseSwagger();
     app.UseSwaggerUI();
 }

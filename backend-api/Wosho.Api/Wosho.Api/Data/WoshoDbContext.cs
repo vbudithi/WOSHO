@@ -15,5 +15,26 @@ namespace Wosho.Api.Data
                 get; set;
             }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u=> u.Email)
+                .IsUnique();
+
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u=>u.MobileNumber)
+                .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.CreatedAt)
+                 .HasColumnType("timestamp with time zone");
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.UpdatedAt)
+                .HasColumnType("timestamp with time zone");
+        }
+
         }
 }

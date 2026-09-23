@@ -262,3 +262,4 @@ D:\WOSHO_new\backend-api\Wosho.Api\Wosho.Api\obj\Debug\net9.0\refint\Wosho.Api.d
 D:\WOSHO_new\backend-api\Wosho.Api\Wosho.Api\obj\Debug\net9.0\Wosho.Api.pdb
 D:\WOSHO_new\backend-api\Wosho.Api\Wosho.Api\obj\Debug\net9.0\Wosho.Api.genruntimeconfig.cache
 D:\WOSHO_new\backend-api\Wosho.Api\Wosho.Api\obj\Debug\net9.0\ref\Wosho.Api.dll
+D:\WOSHO_new\backend-api\Wosho.Api\Wosho.Api\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
