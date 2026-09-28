@@ -11,15 +11,19 @@ import {
     ScrollView,
     KeyboardAvoidingView,
     Platform,
+    Alert,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, LoginFormData } from "../validation/loginSchema";
 import { router } from "expo-router";
+import { loginUser } from "../../../../lib/authService";
+import { saveAccessToken } from "../../../../lib/authStorage";
 
 export default function LoginScreen() {
     const [showPassword, setShowPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const {
         control,
@@ -28,14 +32,40 @@ export default function LoginScreen() {
     } = useForm<LoginFormData>({
         resolver: zodResolver(loginSchema),
         defaultValues: {
-            email: "",
+            emailAddress: "",
             password: "",
         },
     });
 
-    const onSubmit = (data: LoginFormData) => {
-        console.log("Login Data:", data);
+    const handleLogin = async (data: LoginFormData) => {
+
+        if (loading) { return; }
+
+        try {
+            setLoading(true);
+
+            const response = await loginUser({
+                emailAddress: data.emailAddress,
+                password: data.password
+            });
+            console.log("Login Response:", response);
+
+            console.log("Login successful. Token:", response.token);
+
+            await saveAccessToken(response.token);
+            router.replace("/dashboard");
+        } catch (error: any) {
+            console.error("Login error:", error);
+
+            const message = error?.response?.data?.message || "Invalid login or password";
+
+            Alert.alert("Login Failed", message);
+
+        } finally {
+            setLoading(false);
+        }
     };
+
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor="#111" />
@@ -62,12 +92,12 @@ export default function LoginScreen() {
 
                         <Controller
                             control={control}
-                            name="email"
+                            name="emailAddress"
                             render={({ field: { onChange, value } }) => (
                                 <View
                                     style={[
                                         styles.inputContainer,
-                                        errors.email && styles.errorInput,
+                                        errors.emailAddress && styles.errorInput,
                                     ]}
                                 >
                                     <Ionicons
@@ -89,8 +119,8 @@ export default function LoginScreen() {
                             )}
                         />
 
-                        {errors.email && (
-                            <Text style={styles.errorText}>{errors.email.message}</Text>
+                        {errors.emailAddress && (
+                            <Text style={styles.errorText}>{errors.emailAddress.message}</Text>
                         )}
 
                         <Text style={[styles.label, { marginTop: 22 }]}>
@@ -156,7 +186,7 @@ export default function LoginScreen() {
 
                         <TouchableOpacity
                             style={styles.loginButton}
-                            onPress={handleSubmit(onSubmit)}
+                            onPress={handleSubmit(handleLogin)}
                         >
                             <Text style={styles.loginText}>
                                 Log in

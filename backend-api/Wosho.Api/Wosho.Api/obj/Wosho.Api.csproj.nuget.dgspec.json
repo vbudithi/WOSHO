@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WOSHO_new\\backend-api\\Wosho.Api\\wosho.api\\Wosho.Api.csproj": {}
+    "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Wosho.Api.csproj": {}
   },
   "projects": {
-    "D:\\WOSHO_new\\backend-api\\Wosho.Api\\wosho.api\\Wosho.Api.csproj": {
+    "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Wosho.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\wosho.api\\Wosho.Api.csproj",
+        "projectUniqueName": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Wosho.Api.csproj",
         "projectName": "Wosho.Api",
-        "projectPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\wosho.api\\Wosho.Api.csproj",
+        "projectPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Wosho.Api.csproj",
         "packagesPath": "C:\\Users\\vivek\\.nuget\\packages\\",
-        "outputPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\wosho.api\\obj\\",
+        "outputPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

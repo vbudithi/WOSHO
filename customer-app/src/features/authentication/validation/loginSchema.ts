@@ -7,7 +7,7 @@ const mobileRegex =
     /^[0-9]{10}$/;
 
 export const loginSchema = z.object({
-    email: z
+    emailAddress: z
         .string()
         .trim()
         .nonempty("Enter a valid email address.")
