@@ -1,3 +1,5 @@
-import customerRegistrationScreen from "@/features/authentication/screens/CustomerRegistrationScreen";
+import CustomerRegistrationScreen from "@/features/authentication/screens/CustomerRegistrationScreen";
 
-export default customerRegistrationScreen;
+export default function register() {
+    return <CustomerRegistrationScreen />;
+}

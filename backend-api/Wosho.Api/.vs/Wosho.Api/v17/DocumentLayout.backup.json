@@ -3,23 +3,8 @@
   "WorkspaceRootPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,8 +15,20 @@
       "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\migrations\\20260926135122_renameregistrationcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\migrations\\20260926135122_renameregistrationcolumns.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,78 +42,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAAkVAAAAAAAAAAAAwBQVAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-09-23T12:35:39.771Z",
+              "DocumentIndex": 5,
+              "Title": "20260926135122_RenameRegistrationColumns.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Migrations\\20260926135122_RenameRegistrationColumns.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Migrations\\20260926135122_RenameRegistrationColumns.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Migrations\\20260926135122_RenameRegistrationColumns.cs",
+              "RelativeToolTip": "Wosho.Api\\Migrations\\20260926135122_RenameRegistrationColumns.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:58:20.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Wosho.Api\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Wosho.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAABcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-23T12:34:29.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "Wosho.Api\\appsettings.json",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\appsettings.json",
-              "RelativeToolTip": "Wosho.Api\\appsettings.json",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-23T12:34:22.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WoshoDbContext.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Data\\WoshoDbContext.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
-              "RelativeToolTip": "Wosho.Api\\Data\\WoshoDbContext.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwB8AAAAQAAAAAAAAAA==",
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\RegisterDto.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
+              "RelativeToolTip": "Wosho.Api\\DTO\\RegisterDto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAIwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T12:11:08.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Program.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Program.cs",
-              "RelativeToolTip": "Wosho.Api\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T12:10:25.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Models\\User.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
-              "RelativeToolTip": "Wosho.Api\\Models\\User.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T11:42:42.079Z",
+              "WhenOpened": "2026-09-26T13:31:32.478Z",
               "EditorCaption": ""
             },
             {
@@ -127,22 +74,61 @@
               "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Wosho.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAADwv0sAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwBsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T10:26:30.504Z",
+              "WhenOpened": "2026-09-26T13:28:33.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\RegisterDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\RegisterDto.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowAkAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "WoshoDbContext.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Data\\WoshoDbContext.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
+              "RelativeToolTip": "Wosho.Api\\Data\\WoshoDbContext.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCMAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-23T10:18:55.358Z",
+              "WhenOpened": "2026-09-26T13:28:12.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Program.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Program.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Program.cs",
+              "RelativeToolTip": "Wosho.Api\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAkwC8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:28:08.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Models\\UserRole.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\UserRole.cs",
+              "RelativeToolTip": "Wosho.Api\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:28:02.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Models\\User.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
+              "RelativeToolTip": "Wosho.Api\\Models\\User.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA4wA8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-26T13:27:09.354Z",
               "EditorCaption": ""
             }
           ]

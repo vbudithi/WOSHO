@@ -17,7 +17,7 @@ export const customerRegistrationSchema = z
             .string()
             .trim()
         ,
-        email: z
+        emailAddress: z
             .string()
             .trim()
             .min(1, "Email is required.")

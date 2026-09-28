@@ -27,11 +27,11 @@ namespace Wosho.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto dto)
         {
-            var Email = dto.Email.ToLower().Trim();
+            var Email = dto.emailAddress.ToLower().Trim();
 
             //Check if email already exists
             var existingEail = await _db.Users
-                .AnyAsync(u => u.Email == dto.Email);
+                .AnyAsync(u => u.emailAddress == dto.emailAddress);
             if (existingEail)
             {
                 return Conflict(new
@@ -44,7 +44,7 @@ namespace Wosho.Api.Controllers
 
             //Check if mobile number already exists
             var existingMobile = await _db.Users
-                .AnyAsync(u=>u.MobileNumber == dto.MobileNumber);
+                .AnyAsync(u=>u.mobileNumber == dto.mobileNumber);
 
             if (existingMobile)
             {
@@ -57,23 +57,23 @@ namespace Wosho.Api.Controllers
             //Create user
             var user = new User
             {
-                UserId = Guid.NewGuid(),
-                FirstName = dto.FirstName,
-                LastName = dto.LastName,
-                Email = dto.Email,
-                MobileNumber = dto.MobileNumber,
+                userId = Guid.NewGuid(),
+                firstName = dto.firstName,
+                lastName = dto.lastName,
+                emailAddress = dto.emailAddress,
+                mobileNumber = dto.mobileNumber,
                 Role = UserRole.Customer,
-                Status = "Active",
-                EmailVerified = false,
-                MobileVerified = false,
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
+                status = "Active",
+                emailVerified = false,
+                mobileVerified = false,
+                createdAt = DateTime.UtcNow,
+                updatedAt = DateTime.UtcNow,
             };
 
             //Hash Password
-            user.PasswordHash = _passwordHasher.HashPassword(
+            user.passwordHash = _passwordHasher.HashPassword(
                 user,
-                dto.Password);
+                dto.password);
 
             //Save user
             _db.Users.Add(user);
@@ -82,8 +82,8 @@ namespace Wosho.Api.Controllers
             return Created("", new
             {
                 message = "Registered Successfully",
-                user = user.UserId,
-                email = user.Email
+                user = user.userId,
+                email = user.emailAddress
 
             });
         }

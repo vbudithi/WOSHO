@@ -7,27 +7,24 @@ namespace Wosho.Api.DTO
     {
         [Required]
         [MaxLength(100)]
-        public required string FirstName { get; set; }
+        public required string firstName { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public required string LastName { get; set; }
+        public required string lastName { get; set; }
 
         [Required]
         [EmailAddress]
         [MaxLength(255)]
-        public required string Email { get; set; }
+        public required string emailAddress { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public required string MobileNumber { get; set; }
+        public required string mobileNumber { get; set; }
 
         [Required]
         [MinLength(8)]
-        public required string Password { get; set; }
+        public required string password { get; set; }
 
-        [Required]
-        [Compare("Password")]
-        public required string ConfirmPassword { get; set; }
     }
 }
