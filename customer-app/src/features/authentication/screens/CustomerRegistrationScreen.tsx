@@ -90,7 +90,6 @@ export default function CustomerRegistrationScreen() {
                 },
             });
 
-
             Alert.alert(
                 "Registration Successful",
                 "Your WOSHO account has been created successfully.",

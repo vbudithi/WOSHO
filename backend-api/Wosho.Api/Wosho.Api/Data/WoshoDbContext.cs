@@ -19,20 +19,20 @@ namespace Wosho.Api.Data
         {
 
             modelBuilder.Entity<User>()
-                .HasIndex(u=> u.emailAddress)
+                .HasIndex(u=> u.EmailAddress)
                 .IsUnique();
 
 
             modelBuilder.Entity<User>()
-                .HasIndex(u=>u.mobileNumber)
+                .HasIndex(u=>u.MobileNumber)
                 .IsUnique();
 
             modelBuilder.Entity<User>()
-                .Property(u => u.createdAt)
+                .Property(u => u.CreatedAt)
                  .HasColumnType("timestamp with time zone");
 
             modelBuilder.Entity<User>()
-                .Property(u => u.updatedAt)
+                .Property(u => u.UpdatedAt)
                 .HasColumnType("timestamp with time zone");
         }
 

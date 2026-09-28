@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Wosho.Api.Data;
@@ -11,9 +12,11 @@ using Wosho.Api.Data;
 namespace Wosho.Api.Migrations
 {
     [DbContext(typeof(WoshoDbContext))]
-    partial class WoshoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260928083539_RenameColumnsToPascalCase")]
+    partial class RenameColumnsToPascalCase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

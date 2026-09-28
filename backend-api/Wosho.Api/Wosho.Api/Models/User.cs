@@ -1,28 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿ using System.ComponentModel.DataAnnotations;
 
 namespace Wosho.Api.Models
 {
     public class User
     {
-        public Guid userId { get; set; }
+        public Guid UserId { get; set; }
 
         [MaxLength(100)]
-        public string firstName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
 
         [MaxLength(100)]
-        public string lastName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
 
         [MaxLength(100)]
-        public string emailAddress { get; set; } = string.Empty;
+        public string EmailAddress { get; set; } = string.Empty;
 
         [MaxLength(20)]
-        public string mobileNumber { get; set; } = string.Empty;
-        public string passwordHash { get; set; } = string.Empty;
+        public string MobileNumber { get; set; } = string.Empty;
+        public string PasswordHash { get; set; } = string.Empty;
         public UserRole Role { get; set; } = UserRole.Customer;
-        public string status { get; set; } = "Active";
-        public bool emailVerified { get; set; } = false;
-        public bool mobileVerified { get; set; } = false;
-        public DateTime createdAt { get; set; }
-        public DateTime updatedAt { get; set; }
+        public string Status { get; set; } = "Active";
+        public bool EmailVerified { get; set; } = false;
+        public bool MobileVerified { get; set; } = false;
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }
