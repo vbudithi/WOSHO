@@ -30,5 +30,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wosho.Api.Controllers.PasswordController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/controller/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Wosho.Api.DTO.ForgotPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Wosho.Api.Controllers.PasswordController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/controller/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Wosho.Api.DTO.ResetPasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using Wosho.Api.DTO;
 using Wosho.Api.Models;
 
 namespace Wosho.Api.Data
@@ -14,6 +15,8 @@ namespace Wosho.Api.Data
             {
                 get; set;
             }
+
+        public DbSet<PasswordResetToken> PasswordResetTokens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
