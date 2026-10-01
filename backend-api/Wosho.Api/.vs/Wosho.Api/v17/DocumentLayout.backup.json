@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Wosho.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T12:23:23.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PasswordController.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\PasswordController.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
+              "RelativeToolTip": "Wosho.Api\\Controllers\\PasswordController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T12:23:24.105Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
