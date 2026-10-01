@@ -7,6 +7,7 @@ import { router } from "expo-router";
 import { ForgotPasswordFormData, forgotPasswordSchema } from "../validation/forgotPasswordSchema";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 import { Controller, useForm } from "react-hook-form";
+import { ForgotPassword } from "../../../../lib/authService";
 
 export default function ForgotPasswordScreen() {
 
@@ -21,15 +22,32 @@ export default function ForgotPasswordScreen() {
         },
     });
 
-    const onSubmit = (data: ForgotPasswordFormData) => {
+    const [loading, setLoading] = useState(false);
 
-        router.push({
-            pathname: "/email-sent",
-            params: {
-                email: data.email
-            },
-        });
-    };
+    const onSubmit = async (data: ForgotPasswordFormData) => {
+        try {
+            setLoading(true);
+            const response = await ForgotPassword({ emailAddress: data.email });
+            console.log("Forgot Password Response:", response);
+
+            router.push({
+                pathname: "/email-sent",
+                params: {
+                    email: data.email
+                },
+
+            });
+        } catch (error: any) {
+            console.log("Forgot Password Error:", error);
+
+            const message = error?.response?.data?.message || "unable to process your request. Please try again later.";
+
+            alert(message);
+        } finally {
+            setLoading(false);
+        }
+
+    }
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar barStyle="light-content" />
@@ -99,9 +117,10 @@ export default function ForgotPasswordScreen() {
                     <TouchableOpacity
                         style={styles.button}
                         onPress={handleSubmit(onSubmit)}
+                        disabled={loading}
                     >
                         <Text style={styles.buttonText}>
-                            Continue
+                            {loading ? "Sending..." : "Continue"}
                         </Text>
                     </TouchableOpacity>
 
@@ -130,7 +149,6 @@ export default function ForgotPasswordScreen() {
         </SafeAreaView>
     );
 }
-
 
 const styles = StyleSheet.create({
 

@@ -67,7 +67,7 @@
         }
       }
     },
-    "/api/controller/forgot-password": {
+    "/api/Password/forgot-password": {
       "post": {
         "tags": [
           "Password"
@@ -98,7 +98,7 @@
         }
       }
     },
-    "/api/controller/reset-password": {
+    "/api/Password/reset-password": {
       "post": {
         "tags": [
           "Password"

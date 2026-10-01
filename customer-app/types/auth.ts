@@ -20,3 +20,13 @@ export interface LoginResponseDto {
     role: string;
     expiresAt: string;
 }
+
+export interface ForgotPasswordDto {
+    emailAddress: string;
+}
+
+export interface ResetPasswordDto {
+    token: string;
+    newPassword: string;
+    confirmPassword: string;
+}

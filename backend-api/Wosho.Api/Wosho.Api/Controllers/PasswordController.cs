@@ -6,7 +6,7 @@ using Wosho.Api.Services;
 namespace Wosho.Api.Controllers
 {
     [ApiController]
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     public class PasswordController : ControllerBase
     {
         private readonly IPasswordResetService _passwordResetService;

@@ -34,7 +34,7 @@
   {
     "ContainingType": "Wosho.Api.Controllers.PasswordController",
     "Method": "ForgotPassword",
-    "RelativePath": "api/controller/forgot-password",
+    "RelativePath": "api/Password/forgot-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -50,7 +50,7 @@
   {
     "ContainingType": "Wosho.Api.Controllers.PasswordController",
     "Method": "ResetPassword",
-    "RelativePath": "api/controller/reset-password",
+    "RelativePath": "api/Password/reset-password",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

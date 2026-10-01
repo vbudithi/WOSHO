@@ -41,7 +41,10 @@ export default function EmailSentScreen() {
 
             <TouchableOpacity
                 style={styles.button}
-                onPress={() => router.push("/create-new-password")}
+                onPress={() => router.push({
+                    pathname: "/create-new-password",
+                    params: { token: "3SzOsoVkkQxxjRF2QKY6YPKvu/hRicH4sKLVX1lFEU0=" },
+                })}
             >
                 <Text style={styles.buttonText}>
                     Continue

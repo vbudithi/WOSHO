@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Wosho.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a64611e812a27aa6420c4f6616c09235b8baecbe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0afbfa24ba4156856366c97b88fdccd64fd06141")]
 [assembly: System.Reflection.AssemblyProductAttribute("Wosho.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Wosho.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

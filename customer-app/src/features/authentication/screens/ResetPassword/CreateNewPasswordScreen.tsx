@@ -12,17 +12,21 @@ import {
     ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { router } from "expo-router";
+import { router, useLocalSearchParams } from "expo-router";
 import {
     CreateNewPasswordSchema,
     CreateNewPasswordFormData,
 } from "../../validation/CreateNewPasswordSchema";
 import { zodResolver } from "@hookform/resolvers/zod/dist/zod.js";
 import { Controller, useForm } from "react-hook-form";
+import { ResetPassword } from "../../../../../lib/authService";
 
 export default function CreateNewPasswordScreen() {
+    const { token } = useLocalSearchParams<{ token: string }>();
+
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+    const [loading, setLoading] = useState(false);
     const {
         control,
         handleSubmit,
@@ -36,8 +40,25 @@ export default function CreateNewPasswordScreen() {
         },
     });
 
-    const onSubmit = (data: CreateNewPasswordFormData) => {
-        router.replace("/password-reset-success");
+    // const onSubmit = (data: CreateNewPasswordFormData) => {
+    //     router.replace("/password-reset-success");
+    // };
+
+    const onSubmit = async (data: CreateNewPasswordFormData) => {
+        try {
+            setLoading(true);
+            const response = await ResetPassword({
+                token: token,
+                newPassword: data.password,
+                confirmPassword: data.confirmPassword
+            });
+            console.log("Reset Password Response:", response);
+            router.replace("/password-reset-success");
+        } catch (error) {
+            console.error("Error resetting password:", error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (

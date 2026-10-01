@@ -3,64 +3,12 @@
   "WorkspaceRootPath": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\services\\passwordresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\services\\passwordresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\passwordresettoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\services\\ipasswordresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\services\\ipasswordresetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\data\\woshodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|d:\\wosho_new\\backend-api\\wosho.api\\wosho.api\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C593584-B29C-4AF0-9BAA-1C8D628D5E83}|Wosho.Api\\Wosho.Api.csproj|solutionrelative:wosho.api\\auth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,201 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PasswordResetToken.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\PasswordResetToken.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\PasswordResetToken.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\PasswordResetToken.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\PasswordResetToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T11:48:25.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Services\\PasswordHasher.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\PasswordHasher.cs",
-              "RelativeToolTip": "Wosho.Api\\Services\\PasswordHasher.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T11:01:14.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PasswordResetService.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\PasswordResetService.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Services\\PasswordResetService.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\PasswordResetService.cs*",
-              "RelativeToolTip": "Wosho.Api\\Services\\PasswordResetService.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T06:04:53.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PasswordController.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\PasswordController.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
-              "RelativeToolTip": "Wosho.Api\\Controllers\\PasswordController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAswCwAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T05:24:39.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ResetPasswordDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\ResetPasswordDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\ResetPasswordDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\ResetPasswordDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\ResetPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T05:17:03.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ForgotPasswordDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\ForgotPasswordDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\ForgotPasswordDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\ForgotPasswordDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\ForgotPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T05:16:15.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Wosho.Api\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAtwI8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-28T10:14:16.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IPasswordResetService.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\IPasswordResetService.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Services\\IPasswordResetService.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Services\\IPasswordResetService.cs",
-              "RelativeToolTip": "Wosho.Api\\Services\\IPasswordResetService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T05:53:31.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WoshoDbContext.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Data\\WoshoDbContext.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Data\\WoshoDbContext.cs",
-              "RelativeToolTip": "Wosho.Api\\Data\\WoshoDbContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:36:23.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\LoginDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\LoginDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\LoginDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:33:34.952Z",
+              "WhenOpened": "2026-09-30T12:23:23.899Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\RegisterDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\RegisterDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PasswordController.cs",
+              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
+              "RelativeDocumentMoniker": "Wosho.Api\\Controllers\\PasswordController.cs",
+              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Controllers\\PasswordController.cs",
+              "RelativeToolTip": "Wosho.Api\\Controllers\\PasswordController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:33:48.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Models\\User.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Models\\User.cs",
-              "RelativeToolTip": "Wosho.Api\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:33:55.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "Wosho.Api\\appsettings.json",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\appsettings.json",
-              "RelativeToolTip": "Wosho.Api\\appsettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-09-29T10:34:24.022Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Auth\\JwtService.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\Auth\\JwtService.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\Auth\\JwtService.cs",
-              "RelativeToolTip": "Wosho.Api\\Auth\\JwtService.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAAAEYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T10:23:45.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LoginResponseDto.cs",
-              "DocumentMoniker": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\LoginResponseDto.cs",
-              "RelativeDocumentMoniker": "Wosho.Api\\DTO\\LoginResponseDto.cs",
-              "ToolTip": "D:\\WOSHO_new\\backend-api\\Wosho.Api\\Wosho.Api\\DTO\\LoginResponseDto.cs",
-              "RelativeToolTip": "Wosho.Api\\DTO\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-29T06:56:59.012Z",
+              "WhenOpened": "2026-09-30T12:23:24.105Z",
               "EditorCaption": ""
             }
           ]
